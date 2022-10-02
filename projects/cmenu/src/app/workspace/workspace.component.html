@@ -1,0 +1,45 @@
+<div class="workspacecontainer">
+    
+    <div style="display: flex;position: relative;justify-content: center;margin-top: 1rem;">
+
+        <div style="margin-right: 0.2rem;">
+            <img src="assets/images/Saveicon.png" alt="Save icon" title="Save" srcset="" style="height: 1rem;cursor: pointer;" *ngIf="historyOfChanges.length > 0" 
+            (click)="saveChanges()"
+            />
+        </div>
+        <div style="margin-right: 0.2rem;">
+            <img src="assets/images/Undoicon.png" alt="Undo icon" title="Undo" srcset="" style="height: 1rem;cursor: pointer;"  *ngIf="historyOfChanges.length > 0"
+            (click)="undoChanges()"
+            />
+        </div>
+        <div>
+            <img src="assets/images/Closeicon.png" alt="Close icon" title="Close" srcset="" style="height: 1rem;cursor: pointer;" 
+            (click)="closeCompareWindowFun()"
+            />
+        </div>
+    </div>
+    <div class="comparisoncontainer">
+        <div class="left">
+            <app-comparisonwindow 
+            
+            position="left"
+            [data]="formattedLeftData"
+            [metadata]="leftTestdataMetadata"
+            (mergeToOther)="mergeToOther($event)"
+            >
+
+            </app-comparisonwindow>
+        </div>
+        <div class="right">
+            <app-comparisonwindow 
+            
+            position="right"
+            [data]="formattedRightData"
+            [metadata]="rightTestdataMetadata"
+            (mergeToOther)="mergeToOther($event)"
+            >
+
+            </app-comparisonwindow>
+        </div>
+    </div>
+</div>

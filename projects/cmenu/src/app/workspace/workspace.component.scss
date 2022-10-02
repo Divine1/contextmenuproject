@@ -1,0 +1,43 @@
+:host{
+    
+    position: fixed;
+    display: block;
+    top:0;
+    background-color: rgba(233, 233, 233,0.51);
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    .workspacecontainer{
+        position: relative;
+        left: 50%;
+
+        transform: translateX(-50%);
+        
+        .comparisoncontainer{
+            position: relative;
+            display: flex;
+            min-height: 10rem;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 1rem;
+            background-color: rgb(233, 233, 233);
+            .close{
+                position: absolute;
+                right: 0;
+                padding: 0.5rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .left{
+                flex-basis: 100%;
+            }
+            .right{
+                flex-basis: 100%;
+            }
+            .left,.right{
+                padding: 0.5rem;
+            }
+        }
+    }
+}

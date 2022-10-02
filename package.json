@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "serve" : "ng serve"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1102.18",
     "@angular/cli": "~11.2.4",
     "@angular/compiler-cli": "~11.2.5",
     "@types/jasmine": "~3.6.0",

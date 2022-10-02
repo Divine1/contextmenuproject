@@ -1,0 +1,54 @@
+:host{
+    display: block;
+
+    .comparisonwindow{
+         
+        .comparisonwindow-for{
+            background-color: white;
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(243, 243, 238);
+                }
+
+                &.matched{
+                    cursor: pointer;
+                    background-color: rgb(229, 242, 200);
+                }
+                .comparisonwindow-item-element{
+                    padding: 0.5rem 0rem;
+                    padding-left: 0.5rem;
+                    border-bottom: 1px solid rgb(233, 233, 233);
+                    position: relative;
+                    
+                    
+                    .createsymbol{
+                        position: absolute;
+                    
+                        border:  solid black;
+                        border-width: 0 2px 2px 0;
+                        padding:4px;
+                        display: inline-block;
+                        margin-top: 0.3rem;
+                       
+                    }
+                    
+                    .lessthan-symbol{
+                        
+                        transform: rotate(-45deg);
+                        right: -0.6rem;
+                    }
+                    
+                    .greaterthan-symbol{
+                        
+                        transform: rotate(135deg);
+                        left: -0.6rem;
+                    
+                    }
+                }
+            
+        }
+    }
+}
+
+
+

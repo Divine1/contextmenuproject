@@ -1,0 +1,10 @@
+app.component.ts
+
+<button (click)="toggleCompare()">Compare</button>
+
+<app-workspace *ngIf="togglecompare"
+(closeCompareWindow)="toggleCompare($event)"
+></app-workspace>
+
+
+<router-outlet></router-outlet>

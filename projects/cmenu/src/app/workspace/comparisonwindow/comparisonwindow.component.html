@@ -1,0 +1,23 @@
+<!-- <p>comparisonwindow works! position {{position}}</p> -->
+
+<div class="comparisonwindow">
+    <div style="text-align: center;padding-bottom: 0.5rem;">{{metadata.testdataname}}</div>
+    <div *ngFor="let item of data;let cindex=index" class="comparisonwindow-for" [ngClass]="{ 'matched' : item.match}">
+        
+             <div class="comparisonwindow-item-element" *ngIf="item.key" (mouseenter)="item.mouseOverFlag=true"  (mouseleave)="item.mouseOverFlag=false" 
+             (click)="mergeToOtherFun(item,position)"
+             >
+             
+                {{item.key}} - {{item.value}} 
+            
+                
+                <div class="createsymbol lessthan-symbol" *ngIf="position =='left' && item.mouseOverFlag && !item.match"></div>
+                <div class="createsymbol greaterthan-symbol" *ngIf="position =='right' && item.mouseOverFlag  && !item.match"></div>
+
+            </div>
+            <div class="comparisonwindow-item-element"  *ngIf="!item.key">
+                &nbsp;
+            </div>
+        
+    </div>
+</div>
